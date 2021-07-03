@@ -1,0 +1,60 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-image: url("images/Taieri.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calculator-grid{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns:repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto)repeat(5, 100px);
+}
+
+.calculator-grid > button{
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  background-color: rgb(236, 236, 236);
+}
+
+.calculator-grid > button:hover{
+  background-color: rgb(255, 255, 255);
+}
+
+.span-two{
+  grid-column: span 2;
+}
+
+.output{
+  grid-column: 1 / -1;
+  background-color:rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand{
+  color: wheat;
+  font-size: 1.5rem;
+}
+
+.output .current-operand{
+  color:white;
+  font-size: 2.5rem;
+}
